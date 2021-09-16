@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1631722954 source:/home/paul/code/c/tests/client3/main.c
+	<errno.h>
+	<netdb.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<signal.h>
+	<stdbool.h>
+	<time.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	"netcom.h"
+
+1631550008 /home/paul/code/c/tests/client3/netcom.h
+

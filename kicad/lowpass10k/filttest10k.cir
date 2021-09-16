@@ -1,0 +1,17 @@
+.title KiCad schematic
+.include "/home/paul/manuals/spice/OP07_SN.lib"
+XU1 NC_01 Net-_C2-Pad1_ Net-_C1-Pad1_ VM NC_02 Net-_C2-Pad1_ VP NC_03 OP07_SN
+R2 Net-_C1-Pad1_ Net-_C2-Pad2_ 86.9k
+R1 Net-_C2-Pad2_ IN 10.7k
+Vin1 IN 0 dc 0 ac 1
+V+1 VP 0 5
+V-1 VM NC_04 -5
+C1 Net-_C1-Pad1_ 0 13nF
+C2 Net-_C2-Pad1_ Net-_C2-Pad2_ 130nF
+XU2 NC_05 OUT Net-_C3-Pad1_ VM NC_06 OUT VP NC_07 OP07_SN
+R3 Net-_C4-Pad2_ Net-_C2-Pad1_ 5.57k
+C3 Net-_C3-Pad1_ 0 13nF
+C4 OUT Net-_C4-Pad2_ 130nF
+R4 Net-_C3-Pad1_ Net-_C4-Pad2_ 187k
+.ac dec 10 1 1k 
+.end

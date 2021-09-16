@@ -1,0 +1,655 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L seismic:LT1027 U5
+U 1 1 60B924EF
+P 12515 7279
+F 0 "U5" H 12515 7694 50  0000 C CNN
+F 1 "LT1027" H 12515 7603 50  0000 C CNN
+F 2 "" H 12515 6879 50  0001 C CNN
+F 3 "" H 12515 6879 50  0001 C CNN
+	1    12515 7279
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:ADuM1200AR U7
+U 1 1 60B9303D
+P 14314 4665
+F 0 "U7" H 14314 5132 50  0000 C CNN
+F 1 "ADuM1200AR" H 14314 5041 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 14314 4265 50  0001 C CIN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADuM1200_1201.pdf" H 13864 5065 50  0001 C CNN
+	1    14314 4665
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OP07 U1
+U 1 1 605631D4
+P 6880 6382
+F 0 "U1" H 7224 6428 50  0000 L CNN
+F 1 "OP07" H 7224 6337 50  0000 L CNN
+F 2 "" H 6930 6432 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP07.pdf" H 6930 6532 50  0001 C CNN
+F 4 "X" H 6880 6382 50  0001 C CNN "Spice_Primitive"
+F 5 "OP07" H 6880 6382 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 6880 6382 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/paul/manuals/spice/Op07.mod" H 6880 6382 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 7 4 6" H 6880 6382 50  0001 C CNN "Spice_Node_Sequence"
+	1    6880 6382
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R2
+U 1 1 60565A06
+P 5835 6282
+F 0 "R2" V 5630 6282 50  0000 C CNN
+F 1 "5600" V 5721 6282 50  0000 C CNN
+F 2 "" H 5835 6282 50  0001 C CNN
+F 3 "~" H 5835 6282 50  0001 C CNN
+	1    5835 6282
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V+1
+U 1 1 6056AFF3
+P 6401 8998
+F 0 "V+1" H 6629 9044 50  0000 L CNN
+F 1 "10" H 6629 8953 50  0000 L CNN
+F 2 "" H 6401 8998 50  0001 C CNN
+F 3 "~" H 6401 8998 50  0001 C CNN
+	1    6401 8998
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C1
+U 1 1 6057D250
+P 6195 6872
+F 0 "C1" H 6373 6918 50  0000 L CNN
+F 1 "120nF" H 6373 6827 50  0000 L CNN
+F 2 "" H 6195 6872 50  0001 C CNN
+F 3 "~" H 6195 6872 50  0001 C CNN
+	1    6195 6872
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C2
+U 1 1 6057FF17
+P 6325 5557
+F 0 "C2" V 6010 5557 50  0000 C CNN
+F 1 "150nF" V 6101 5557 50  0000 C CNN
+F 2 "" H 6325 5557 50  0001 C CNN
+F 3 "~" H 6325 5557 50  0001 C CNN
+	1    6325 5557
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:0 #GND01
+U 1 1 60581C3A
+P 6401 9298
+F 0 "#GND01" H 6401 9198 50  0001 C CNN
+F 1 "0" H 6401 9387 50  0000 C CNN
+F 2 "" H 6401 9298 50  0001 C CNN
+F 3 "~" H 6401 9298 50  0001 C CNN
+	1    6401 9298
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND03
+U 1 1 60582AE9
+P 7730 9303
+F 0 "#GND03" H 7730 9203 50  0001 C CNN
+F 1 "0" H 7730 9392 50  0000 C CNN
+F 2 "" H 7730 9303 50  0001 C CNN
+F 3 "~" H 7730 9303 50  0001 C CNN
+	1    7730 9303
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND02
+U 1 1 60583CA3
+P 6195 7122
+F 0 "#GND02" H 6195 7022 50  0001 C CNN
+F 1 "0" H 6195 7211 50  0000 C CNN
+F 2 "" H 6195 7122 50  0001 C CNN
+F 3 "~" H 6195 7122 50  0001 C CNN
+	1    6195 7122
+	1    0    0    -1  
+$EndComp
+Text GLabel 6401 8698 1    50   Input ~ 0
+VP
+Text GLabel 6780 6082 1    50   Input ~ 0
+VP
+Text GLabel 6780 6682 3    50   Input ~ 0
+VM
+$Comp
+L Amplifier_Operational:OP07 U2
+U 1 1 6058905A
+P 9430 6482
+F 0 "U2" H 9774 6528 50  0000 L CNN
+F 1 "OP07" H 9774 6437 50  0000 L CNN
+F 2 "" H 9480 6532 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP07.pdf" H 9480 6632 50  0001 C CNN
+F 4 "X" H 9430 6482 50  0001 C CNN "Spice_Primitive"
+F 5 "OP07" H 9430 6482 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 9430 6482 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/home/paul/manuals/spice/Op07.mod" H 9430 6482 50  0001 C CNN "Spice_Lib_File"
+F 8 "3 2 7 4 6" H 9430 6482 50  0001 C CNN "Spice_Node_Sequence"
+	1    9430 6482
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R3
+U 1 1 60589138
+P 7885 6382
+F 0 "R3" V 7680 6382 50  0000 C CNN
+F 1 "6800" V 7771 6382 50  0000 C CNN
+F 2 "" H 7885 6382 50  0001 C CNN
+F 3 "~" H 7885 6382 50  0001 C CNN
+	1    7885 6382
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:C C3
+U 1 1 60589147
+P 8745 6972
+F 0 "C3" H 8870 7082 50  0000 R CNN
+F 1 "47nF" H 8945 6877 50  0000 R CNN
+F 2 "" H 8745 6972 50  0001 C CNN
+F 3 "~" H 8745 6972 50  0001 C CNN
+	1    8745 6972
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C4
+U 1 1 60589155
+P 8875 5657
+F 0 "C4" V 8560 5657 50  0000 C CNN
+F 1 "300nF" V 8651 5657 50  0000 C CNN
+F 2 "" H 8875 5657 50  0001 C CNN
+F 3 "~" H 8875 5657 50  0001 C CNN
+	1    8875 5657
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:0 #GND05
+U 1 1 60589163
+P 8745 7222
+F 0 "#GND05" H 8745 7122 50  0001 C CNN
+F 1 "0" H 8745 7311 50  0000 C CNN
+F 2 "" H 8745 7222 50  0001 C CNN
+F 3 "~" H 8745 7222 50  0001 C CNN
+	1    8745 7222
+	1    0    0    -1  
+$EndComp
+Text GLabel 9330 6182 1    50   Input ~ 0
+VP
+Text GLabel 9330 6782 3    50   Input ~ 0
+VM
+$Comp
+L pspice:R R4
+U 1 1 6058912E
+P 8385 6382
+F 0 "R4" V 8180 6382 50  0000 C CNN
+F 1 "6800" V 8271 6382 50  0000 C CNN
+F 2 "" H 8385 6382 50  0001 C CNN
+F 3 "~" H 8385 6382 50  0001 C CNN
+	1    8385 6382
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L VoiceCoil1
+U 1 1 60C54CEE
+P 3402 6332
+F 0 "VoiceCoil1" H 3016 6412 50  0000 L CNN
+F 1 "L" H 3163 6321 50  0000 L CNN
+F 2 "" H 3402 6332 50  0001 C CNN
+F 3 "~" H 3402 6332 50  0001 C CNN
+	1    3402 6332
+	1    0    0    -1  
+$EndComp
+Text GLabel 15481 2668 2    50   Input ~ 0
+BB_9_2_DGND
+Text GLabel 15477 2517 2    50   Input ~ 0
+BB_9_4_3V3
+Wire Wire Line
+	6580 6482 6445 6482
+Wire Wire Line
+	6445 6482 6445 6912
+Wire Wire Line
+	6445 6912 7180 6912
+Wire Wire Line
+	7180 6912 7180 6382
+Wire Wire Line
+	7180 6382 7490 6382
+Connection ~ 7180 6382
+Wire Wire Line
+	6580 6282 6195 6282
+Wire Wire Line
+	5585 6282 5500 6282
+Wire Wire Line
+	6195 6282 6195 6622
+Connection ~ 6195 6282
+Wire Wire Line
+	6195 6282 6085 6282
+Connection ~ 5500 6282
+Wire Wire Line
+	5500 6282 5425 6282
+Wire Wire Line
+	5500 5557 5500 6282
+Wire Wire Line
+	5500 5557 6075 5557
+Wire Wire Line
+	6575 5557 7490 5557
+Wire Wire Line
+	7490 5557 7490 6382
+Connection ~ 7490 6382
+Wire Wire Line
+	7490 6382 7635 6382
+Wire Wire Line
+	10040 7012 10040 6482
+Wire Wire Line
+	9730 6482 10040 6482
+Wire Wire Line
+	9130 6382 8745 6382
+Connection ~ 8745 6382
+Wire Wire Line
+	9125 5657 10040 5657
+Wire Wire Line
+	8745 6382 8745 6722
+Connection ~ 10040 6482
+Wire Wire Line
+	10040 5657 10040 6482
+Wire Wire Line
+	8635 6382 8745 6382
+Wire Wire Line
+	8135 6382 8135 5657
+Wire Wire Line
+	8135 5657 8625 5657
+Connection ~ 8135 6382
+Wire Wire Line
+	10040 7012 9130 7012
+Wire Wire Line
+	9130 7012 9130 6582
+Wire Wire Line
+	14814 4465 15137 4465
+$Comp
+L Isolator:ADuM1200AR U8
+U 1 1 60B93900
+P 14336 5655
+F 0 "U8" H 14336 6122 50  0000 C CNN
+F 1 "ADuM1200AR" H 14336 6031 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 14336 5255 50  0001 C CIN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADuM1200_1201.pdf" H 13886 6055 50  0001 C CNN
+	1    14336 5655
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:ADuM1200AR U6
+U 1 1 60B8ECED
+P 14309 3731
+F 0 "U6" H 14309 4198 50  0000 C CNN
+F 1 "ADuM1200AR" H 14309 4107 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 14309 3331 50  0001 C CIN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADuM1200_1201.pdf" H 13859 4131 50  0001 C CNN
+	1    14309 3731
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14809 3531 15137 3531
+Wire Wire Line
+	15137 5455 14836 5455
+Connection ~ 15137 3531
+Wire Wire Line
+	15137 3531 15137 4465
+Connection ~ 15137 4465
+Wire Wire Line
+	15137 4465 15137 5455
+Wire Wire Line
+	14836 5855 15248 5855
+Wire Wire Line
+	14814 4865 15248 4865
+Connection ~ 15248 4865
+Wire Wire Line
+	15248 4865 15248 5855
+Wire Wire Line
+	15137 2517 15137 3531
+Wire Wire Line
+	15137 2517 15477 2517
+Wire Wire Line
+	15248 2668 15481 2668
+Text GLabel 15515 3631 2    50   Input ~ 0
+BB_9_27
+Text GLabel 15522 3831 2    50   Input ~ 0
+BB_9_28
+Text GLabel 15538 4565 2    50   Input ~ 0
+BB_9_29
+Text GLabel 15533 5554 2    50   Output ~ 0
+BB_9_30
+Text GLabel 15534 5755 2    50   Output ~ 0
+BB_9_31
+Text Notes 15744 3579 2    50   ~ 0
+CLK
+Wire Wire Line
+	14809 3831 15522 3831
+Text Notes 15822 3776 2    50   ~ 0
+Sample\n
+Wire Wire Line
+	14814 4565 15538 4565
+Text Notes 15756 4489 2    50   ~ 0
+Cal\n
+Wire Wire Line
+	14809 3931 15248 3931
+Wire Wire Line
+	15248 2668 15248 3931
+Connection ~ 15248 3931
+Wire Wire Line
+	15248 3931 15248 4865
+Wire Wire Line
+	14836 5555 15533 5555
+Wire Wire Line
+	15533 5555 15533 5554
+Wire Wire Line
+	14836 5755 15534 5755
+Text Notes 15760 5496 2    50   ~ 0
+BUSY
+Text Notes 15780 5703 2    50   ~ 0
+SDATA
+Text Notes 14995 4784 2    50   ~ 0
+N/C\n
+Text Notes 13776 4790 2    50   ~ 0
+N/C\n
+Text GLabel 7730 8703 1    50   Input ~ 0
+VM
+$Comp
+L pspice:VSOURCE V-1
+U 1 1 6056B3ED
+P 7730 9003
+F 0 "V-1" H 7958 9049 50  0000 L CNN
+F 1 "-10" H 7958 8958 50  0000 L CNN
+F 2 "" H 7730 9003 50  0001 C CNN
+F 3 "~" H 7730 9003 50  0001 C CNN
+	1    7730 9003
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE VDIG1
+U 1 1 60BD96C3
+P 5199 9015
+F 0 "VDIG1" H 5427 9061 50  0000 L CNN
+F 1 "5" H 5427 8970 50  0000 L CNN
+F 2 "" H 5199 9015 50  0001 C CNN
+F 3 "~" H 5199 9015 50  0001 C CNN
+	1    5199 9015
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND07
+U 1 1 60BD96C9
+P 5199 9315
+F 0 "#GND07" H 5199 9215 50  0001 C CNN
+F 1 "0" H 5199 9404 50  0000 C CNN
+F 2 "" H 5199 9315 50  0001 C CNN
+F 3 "~" H 5199 9315 50  0001 C CNN
+	1    5199 9315
+	1    0    0    -1  
+$EndComp
+Text GLabel 5199 8715 1    50   Input ~ 0
+VDD
+Text GLabel 12948 5015 2    50   Input ~ 0
+VDD
+Text GLabel 12948 5165 2    50   Input ~ 0
+VM
+Text GLabel 12048 5165 0    50   Input ~ 0
+VP
+$Comp
+L power:GND #PWR02
+U 1 1 60BF84AA
+P 12048 5615
+F 0 "#PWR02" H 12048 5365 50  0001 C CNN
+F 1 "GND" V 12053 5487 50  0000 R CNN
+F 2 "" H 12048 5615 50  0001 C CNN
+F 3 "" H 12048 5615 50  0001 C CNN
+	1    12048 5615
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 60BF991E
+P 12948 5615
+F 0 "#PWR04" H 12948 5365 50  0001 C CNN
+F 1 "GND" H 12953 5442 50  0000 C CNN
+F 2 "" H 12948 5615 50  0001 C CNN
+F 3 "" H 12948 5615 50  0001 C CNN
+	1    12948 5615
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 60BF4EB2
+P 12048 5015
+F 0 "#PWR01" H 12048 4765 50  0001 C CNN
+F 1 "GND" V 12053 4887 50  0000 R CNN
+F 2 "" H 12048 5015 50  0001 C CNN
+F 3 "" H 12048 5015 50  0001 C CNN
+	1    12048 5015
+	0    1    1    0   
+$EndComp
+$Comp
+L seismic:AD677JN U4
+U 1 1 60B8F93C
+P 12498 5065
+F 0 "U4" H 12480 5777 50  0000 C CNN
+F 1 "AD677JN" H 12498 4295 50  0000 C CNN
+F 2 "" H 12548 4415 50  0001 C CNN
+F 3 "" H 12548 4415 50  0001 C CNN
+	1    12498 5065
+	1    0    0    -1  
+$EndComp
+Text GLabel 13809 3531 0    50   Input ~ 0
+VDD
+Text GLabel 13814 4465 0    50   Input ~ 0
+VDD
+Text Notes 15340 2337 0    50   ~ 0
+BeagleBone Black\n
+Text GLabel 13836 5455 0    50   Input ~ 0
+VDD
+$Comp
+L power:GND #PWR05
+U 1 1 60C29FB9
+P 13809 3931
+F 0 "#PWR05" H 13809 3681 50  0001 C CNN
+F 1 "GND" H 13814 3758 50  0000 C CNN
+F 2 "" H 13809 3931 50  0001 C CNN
+F 3 "" H 13809 3931 50  0001 C CNN
+	1    13809 3931
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 60C2B00C
+P 13814 4865
+F 0 "#PWR06" H 13814 4615 50  0001 C CNN
+F 1 "GND" H 13819 4692 50  0000 C CNN
+F 2 "" H 13814 4865 50  0001 C CNN
+F 3 "" H 13814 4865 50  0001 C CNN
+	1    13814 4865
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 60C2C1CF
+P 13836 5855
+F 0 "#PWR07" H 13836 5605 50  0001 C CNN
+F 1 "GND" H 13841 5682 50  0000 C CNN
+F 2 "" H 13836 5855 50  0001 C CNN
+F 3 "" H 13836 5855 50  0001 C CNN
+	1    13836 5855
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12948 4565 13814 4565
+Wire Wire Line
+	14809 3631 15515 3631
+Wire Wire Line
+	11885 3831 13809 3831
+Wire Wire Line
+	11885 3831 11885 4565
+Wire Wire Line
+	11885 4565 12048 4565
+Wire Wire Line
+	13809 3631 11778 3631
+Wire Wire Line
+	11778 3631 11778 4715
+Wire Wire Line
+	11778 4715 12048 4715
+Wire Wire Line
+	12048 4865 11632 4865
+Wire Wire Line
+	11632 4865 11632 6070
+Wire Wire Line
+	11632 6070 13669 6070
+Wire Wire Line
+	13669 6070 13669 5755
+Wire Wire Line
+	13669 5755 13836 5755
+Wire Wire Line
+	13836 5555 13561 5555
+Wire Wire Line
+	13561 5555 13561 4715
+Wire Wire Line
+	13561 4715 12948 4715
+Text GLabel 12115 7279 0    50   Input ~ 0
+VP
+$Comp
+L power:GND #PWR03
+U 1 1 60D0A1A5
+P 12115 7479
+F 0 "#PWR03" H 12115 7229 50  0001 C CNN
+F 1 "GND" H 12120 7306 50  0000 C CNN
+F 2 "" H 12115 7479 50  0001 C CNN
+F 3 "" H 12115 7479 50  0001 C CNN
+	1    12115 7479
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12915 7379 13481 7379
+Wire Wire Line
+	12948 5315 13481 5315
+Wire Wire Line
+	13481 5315 13481 7379
+Wire Wire Line
+	10040 6482 13248 6482
+Wire Wire Line
+	12948 5465 13248 5465
+Wire Wire Line
+	13248 5465 13248 6482
+$Comp
+L pspice:R R1
+U 1 1 60566468
+P 5175 6282
+F 0 "R1" V 4970 6282 50  0000 C CNN
+F 1 "5600" V 5061 6282 50  0000 C CNN
+F 2 "" H 5175 6282 50  0001 C CNN
+F 3 "~" H 5175 6282 50  0001 C CNN
+	1    5175 6282
+	0    1    1    0   
+$EndComp
+Text GLabel 4176 5982 1    50   Input ~ 0
+VP
+Text GLabel 4176 6582 3    50   Input ~ 0
+VM
+Wire Wire Line
+	3402 6182 3976 6182
+$Comp
+L Amplifier_Operational:OP07 U3
+U 1 1 60C53564
+P 4276 6282
+F 0 "U3" H 4285 6498 50  0000 L CNN
+F 1 "OP07" H 4301 6421 50  0000 L CNN
+F 2 "" H 4326 6332 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP07.pdf" H 4326 6432 50  0001 C CNN
+	1    4276 6282
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3976 6382 3831 6382
+Connection ~ 4736 6282
+Wire Wire Line
+	4736 6282 4925 6282
+Wire Wire Line
+	4576 6282 4736 6282
+Wire Wire Line
+	4736 6903 4347 6903
+Wire Wire Line
+	4736 6282 4736 6903
+$Comp
+L Device:R R5
+U 1 1 613E51B3
+P 4197 6903
+F 0 "R5" V 4303 6901 50  0000 C CNN
+F 1 "100K" V 4383 6911 50  0000 C CNN
+F 2 "" V 4127 6903 50  0001 C CNN
+F 3 "~" H 4197 6903 50  0001 C CNN
+	1    4197 6903
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 61474B83
+P 3831 7094
+F 0 "R6" H 4007 7056 50  0000 C CNN
+F 1 "1K" H 4009 7141 50  0000 C CNN
+F 2 "" V 3761 7094 50  0001 C CNN
+F 3 "~" H 3831 7094 50  0001 C CNN
+	1    3831 7094
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:0 #GND06
+U 1 1 6148534A
+P 3831 7331
+F 0 "#GND06" H 3831 7231 50  0001 C CNN
+F 1 "0" H 3831 7420 50  0000 C CNN
+F 2 "" H 3831 7331 50  0001 C CNN
+F 3 "~" H 3831 7331 50  0001 C CNN
+	1    3831 7331
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3831 7244 3831 7331
+Wire Wire Line
+	3831 6382 3831 6903
+Connection ~ 3831 6903
+Wire Wire Line
+	3831 6903 3831 6944
+Wire Wire Line
+	3830 6903 3831 6903
+Wire Wire Line
+	3831 6903 4047 6903
+$Comp
+L pspice:0 #GND04
+U 1 1 614AC23D
+P 3402 6555
+F 0 "#GND04" H 3402 6455 50  0001 C CNN
+F 1 "0" H 3402 6644 50  0000 C CNN
+F 2 "" H 3402 6555 50  0001 C CNN
+F 3 "~" H 3402 6555 50  0001 C CNN
+	1    3402 6555
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3402 6482 3402 6555
+$EndSCHEMATC
