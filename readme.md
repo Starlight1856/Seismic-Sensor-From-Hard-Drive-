@@ -27,31 +27,40 @@ ___________________________________
 
 
 Beaglebone code
+---------------
 Code for driving PRU, and userpace application seismic3 which 
 acquires and stores data, and also acts as remote server.
 
 client3
+-------
 Client application for desktop which obtains and stores to file
 the data stored in Beaglebone remote server.
 
 datasheets
+----------
 This folder contains all the datasheets used for the project.
 
 doc
+---
 seismic4.pdf document details the work and results.
 
 kicad
+-----
 Project files for Kicad application. Used for circuit schematics and
 lowpass filter simulation.
 
 lpfilter
+--------
 Simulation results, and information used in design.
 
 misc
+----
 Miscellaneous diagrams, pictures.
 
 python
+------
 Python scripts used in analysis of data.
 
 results
+-------
 Data files of run detailed in seismic4.pdf document,
